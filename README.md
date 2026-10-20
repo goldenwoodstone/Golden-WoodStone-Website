@@ -1,59 +1,41 @@
 # Golden WoodStone — Editable Website
 
-## Revised site — October 20, 2026
+## October 2026 website update
 
-This revision replaces the overlapping homepage photo collage with one genuine Himalayan salt cave image, restores the supplied Golden WoodStone logo, shortens repeated sections, improves the mobile layout and avoids mixing photos from distinct bathroom projects.
+This version contains the refined Golden WoodStone homepage, supplied project photos and logo, editable portfolio, and the Formspree-connected project inquiry form.
 
-## Current status
+### Form endpoint
 
-This is a website **preview** with real Golden WoodStone photos and an editable portfolio.
-The preview is deliberately **noindex** to avoid indexing a temporary second site.
-The contact form now submits through FormSubmit (external form processing). Before launch, submit a real test message from the published /contact/ page; the owner MUST confirm the activation email received at goldenwoodstone@gmail.com. Then send another test and verify it arrives in the inbox. A successful static build cannot verify email delivery.
+Formspree form endpoint: `https://formspree.io/f/myekqpyy` (the form ID shown in the business owner's Formspree Integration screenshot).
 
-## Setup for easy editing
+The contact form on `/contact/` captures name, phone number, email, project type and project description and sends a `POST` request to Formspree. The browser only shows our branded thank-you page if Formspree's endpoint returns a successful HTTP status. Errors retain the visitor's entries and display phone/email contact alternatives.
 
-1. Create a free GitHub account and a **private** repository (e.g. `goldenwoodstone-website`).
-2. Upload the **files inside this folder** to the repository root (not an enclosing folder). Keep the `.pages.yml` file.
-3. In Cloudflare choose **Create application → Pages → Connect to Git**. Select the repo. This makes a **new** Pages project because your existing `goldenwoodstone` preview was a direct ZIP upload project. Do not delete or move the old one yet.
-4. Set **Build command:** `npm run build`. **Output folder:** `dist`. Root directory blank/default. Deploy on the free plan.
-5. After deployed, visit https://app.pagescms.org, sign in with the same GitHub account, authorize the repo, and open **Project Photos & Portfolio** to upload photos / add projects. Saving commits to GitHub and triggers Cloudflare's site update.
-6. When the new site and quote form are tested, connect the GoDaddy domain to the new Pages project. Only after the domain points correctly, turn on `allow_indexing` in **Business Info & Homepage Text**. Check DNS and MX/email records first.
+**Before officially connecting goldenwoodstone.ca:** Submit one test through the Pages preview, then confirm its actual details appear in the Formspree **Submissions** dashboard and in `goldenwoodstone@gmail.com`. Check email notification settings and spam folder. A successful local build does NOT guarantee message delivery. The notification recipient must be configured/verified in Formspree.
 
-## What you can edit on your phone
+Do not reconnect to FormSubmit: it has been removed from this version.
 
-- Upload a new photo to an existing project, change its title, move its order, unpublish it.
-- Add a new project by creating an entry in **Project Photos & Portfolio**.
-- Edit business phone/email and homepage introduction.
+### Upload this update to GitHub
 
-## What still needs work before official launch
+1. Unzip the archive on the Mac.
+2. Open the extracted folder, then select everything **inside** it (not the outer folder). On a Mac, Command+Shift+. displays hidden files, including `.pages.yml`.
+3. In the existing `goldenwoodstone/Golden-WoodStone-Website` repository, choose **Add file → Upload files**.
+4. Drag the internal items, including `content/`, `public/`, `build.mjs`, `package.json`, `.pages.yml`, and `README.md` into the upload area. Commit directly to `main` when paths look correct.
+5. Cloudflare Pages should automatically rebuild. Visit `https://golden-woodstone-website.pages.dev/contact/` to test once.
+6. Existing files that are not in this package are not automatically deleted by GitHub's web uploader; review any outdated files separately if needed.
 
-- Activate FormSubmit: on the live /contact/ page, submit one test request, open goldenwoodstone@gmail.com, and click the FormSubmit activation link (check Spam). Submit a SECOND test and confirm it reaches the inbox. The default reCAPTCHA / honeypot deter spam. Do not accept leads as working until this end-to-end test succeeds.
-- Check website on both iPhone and desktop.
-- Connect `goldenwoodstone.ca` with safe DNS migration; retain original GoDaddy domain registration.
-- Turn Google indexing ON only once the primary domain is set, then register sitemap in Google Search Console.
-- Confirm legal/marketing details: warranty, licensing, insurance, reviews, service area — none claimed without verification.
+### Cloudflare Pages settings
 
-## Local build
+- Framework preset: None
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: leave empty/default
 
-Requires Node.js 18 or later. Run `npm run build`. The published static site is in the `dist` folder.
+This is a preview site with `allow_indexing: false` in `content/site.json`, deliberately telling search engines not to index the Pages preview.
 
-This design uses only photos supplied by Golden WoodStone, not stock photos. No website hosting subscription is required under normal Cloudflare Pages free-tier limits.
+### Portfolio updates
 
-## How to replace your existing GitHub version
+The `content/projects/` folder holds one JSON file per project. `public/assets/images/` holds website photos. `.pages.yml` is the Pages CMS configuration for editing the portfolio through GitHub. See `https://pagescms.org/` for setup.
 
-1. Download and unzip this archive on your Mac.
-2. Open the extracted folder. Press Command + Shift + . to display the hidden `.pages.yml` editing configuration.
-3. Open the existing **Golden-WoodStone-Website** repository on GitHub, select **Add file → Upload files**.
-4. Drag **everything inside** the extracted folder into the GitHub box, including the `content` and `public` folders, and commit changes. Do not upload the ZIP itself and do not drag the outer folder.
-5. Cloudflare Pages should start a new build automatically after the commit. Review the new Pages URL on phone and laptop.
+After verifying the contact form, connect `goldenwoodstone.ca` through Cloudflare Pages with care not to disturb existing email DNS/MX records; then change `allow_indexing` to `true` and submit the sitemap in Google Search Console.
 
-Do not connect goldenwoodstone.ca or enable Google indexing until contact inquiries have been tested and domain settings have been reviewed.
-
-## Contact form implementation
-
-- Uses the documented free `formsubmit.co` HTML POST endpoint with name, phone, email, project type and details, not `mailto:`.
-- Default FormSubmit reCAPTCHA is left on; a honeypot is included. There is a first-use email activation step.
-- After the form is activated, successful submissions redirect to `/thank-you/` on the current host. If JavaScript is disabled, the service shows its default confirmation screen instead.
-- The third-party service processes and retains submission data; inform customers of the service in the form. See https://formsubmit.co/documentation and https://formsubmit.co/help.
-- A form POST cannot be fully tested from a local static preview: test on the Cloudflare `pages.dev` address after deploying and then again after custom-domain connection.
-- In case submissions fail or land in Spam, visitors can call 226-504-0206 or use the email link.
+No guarantees about insurance, licensing, warranty, review count, or other unverified facts should be added.

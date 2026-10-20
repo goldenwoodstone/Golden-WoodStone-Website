@@ -107,3 +107,13 @@
 
 /* Keep spam-prevention honeypot offscreen while retaining a standard HTML form. */
 .spam-trap{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+/* Reliable lead form: preserve fields on failure and display errors accessibly. */
+.quote-fieldset{border:0;padding:0;margin:0;min-width:0}
+.form-status{min-height:22px;font-size:13px;line-height:1.5;margin-top:12px;color:#265b4d}
+.form-status.error{color:#9c332d;font-weight:600}
+.form-notice{background:#fbf3e4;border-left:4px solid #a6814a;padding:14px 16px;margin:16px 0}
+.form-notice strong{display:block;font-size:14px}.form-notice p{font-size:13px;line-height:1.55;margin:5px 0 0}
+.form-notice a{color:#5a4725;text-decoration:underline}
+.quote-fieldset:disabled{opacity:.6}
+#quote-submit:disabled{opacity:.65;cursor:wait}

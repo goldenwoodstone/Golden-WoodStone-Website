@@ -1,0 +1,13 @@
+{
+  "title": "Commercial Retail Interior",
+  "category": "commercial",
+  "description": "Commercial interior finish work with display systems, clean detailing and lighting.",
+  "cover": "/assets/images/commercial-retail.webp",
+  "gallery": [
+    "/assets/images/commercial-progress.webp"
+  ],
+  "featured": true,
+  "published": true,
+  "sort_order": 4,
+  "service": "Commercial improvements"
+}

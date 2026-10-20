@@ -1,0 +1,13 @@
+{
+  "title": "Contemporary Shower",
+  "category": "residential",
+  "description": "Shower renovation with large-format grey tile, glass enclosure and modern fixtures.",
+  "cover": "/assets/images/bathroom-grey-shower.webp",
+  "gallery": [
+    "/assets/images/bathroom-marble.webp"
+  ],
+  "featured": true,
+  "published": true,
+  "sort_order": 3,
+  "service": "Bathroom & tilework"
+}

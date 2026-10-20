@@ -1,0 +1,11 @@
+{
+  "title": "Architectural Woodwork",
+  "category": "specialty",
+  "description": "Warm wood detailing and custom architectural carpentry.",
+  "cover": "/assets/images/woodwork.webp",
+  "gallery": [],
+  "featured": false,
+  "published": true,
+  "sort_order": 7,
+  "service": "Custom details"
+}

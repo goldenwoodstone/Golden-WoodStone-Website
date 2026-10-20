@@ -1,0 +1,13 @@
+{
+  "title": "Himalayan Salt Cave",
+  "category": "specialty",
+  "description": "An immersive salt cave with illuminated salt walls and sculpted ceiling finishes.",
+  "cover": "/assets/images/salt-cave.webp",
+  "gallery": [
+    "/assets/images/salt-cave-build.webp"
+  ],
+  "featured": true,
+  "published": true,
+  "sort_order": 1,
+  "service": "Specialty spa construction"
+}

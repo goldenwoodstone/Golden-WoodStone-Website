@@ -1,0 +1,14 @@
+{
+  "title": "Marble-Look Bathroom Renovation",
+  "category": "residential",
+  "description": "Clean-lined bathroom renovation featuring striking marble-look wall tile, a glass shower and carefully finished details.",
+  "cover": "/assets/images/bathroom-marble.webp",
+  "gallery": [
+    "/assets/images/bathroom-vanity.webp",
+    "/assets/images/bathroom-grey-shower.webp"
+  ],
+  "featured": true,
+  "published": true,
+  "sort_order": 2,
+  "service": "Bathroom renovation"
+}

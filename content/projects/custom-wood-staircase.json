@@ -1,0 +1,13 @@
+{
+  "title": "Custom Wood Staircase",
+  "category": "residential",
+  "description": "Wood stair installation and finishing as part of a residential interior project.",
+  "cover": "/assets/images/stairs.webp",
+  "gallery": [
+    "/assets/images/residential-hall.webp"
+  ],
+  "featured": false,
+  "published": true,
+  "sort_order": 5,
+  "service": "Carpentry & finishing"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Residential Interior Renovation",
+  "category": "residential",
+  "description": "Updated living spaces and refined interior finishes, including flooring and trim.",
+  "cover": "/assets/images/residential-living.webp",
+  "gallery": [
+    "/assets/images/residential-fireplace.webp",
+    "/assets/images/residential-bedroom.webp"
+  ],
+  "featured": true,
+  "published": true,
+  "sort_order": 6,
+  "service": "Residential renovations"
+}

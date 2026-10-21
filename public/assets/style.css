@@ -119,17 +119,17 @@
 #quote-submit:disabled{opacity:.65;cursor:wait}
 
 
-/* Golden WoodStone social media links */
-.social-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
-.social-link{display:inline-flex;gap:9px;align-items:center;justify-content:center;border:1px solid currentColor;border-radius:6px;padding:9px 12px;min-height:44px;font-size:12px;font-weight:700;line-height:1.2;text-decoration:none;transition:background-color .2s,border-color .2s}
-.social-link svg{width:19px;height:19px;flex:none}
-.social-link:focus-visible{outline:3px solid #c6a46f;outline-offset:3px}
-.footer-social{margin-top:23px}
+/* Compact social icons: small, side by side, no button boxes */
+.social-links{display:flex;flex-wrap:nowrap;align-items:center;gap:8px;margin-top:9px}
+.social-link{display:inline-flex;align-items:center;justify-content:center;flex:0 0 38px;width:38px;height:38px;min-height:38px;padding:0;margin:0;border:0;border-radius:50%;background:transparent;text-decoration:none;transition:color .2s}
+.social-link svg{display:block;width:19px;height:19px;flex:none}
+.social-link span{display:none}
+.social-link:focus-visible{outline:2px solid #c6a46f;outline-offset:2px}
+.footer-social{margin-top:16px}
 .footer-social-label{display:block;font-size:10px;font-weight:700;letter-spacing:.13em;color:#dbb880}
-.footer-social .social-link{color:#e5e8e6;border-color:#53615f}
-.footer-social .social-link:hover{background:#293a38;border-color:#d6b581}
-.contact-social{margin-top:28px}
-.contact-social .social-links{margin-top:12px}
-.contact-social .social-link{color:#293d39;border-color:#aab1a9}
-.contact-social .social-link:hover{background:#e9eee9;border-color:#8a784f}
-@media(max-width:650px){.social-links{gap:8px}.social-link{font-size:12px}}
+.footer-social .social-link{color:#e5e8e6}
+.footer-social .social-link:hover{color:#d6b581;background:transparent}
+.contact-social{margin-top:24px}
+.contact-social .social-links{margin-top:7px}
+.contact-social .social-link{color:#293d39}
+.contact-social .social-link:hover{color:#916b3b;background:transparent}
